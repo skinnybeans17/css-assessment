@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+			<style>
+			
+				.swatch {
+					margin: 1px;
+					width: 90px;
+					height: 90px;
+				}
+
+				.swatches{
+					display: grid;
+					grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+					grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+					grid-gap: 5px;
+				}
+			
+				main {
+					width: 1200px;
+					margin: auto;
+					min-height: 100vh;
+					font-family: Arial, Helvetica, sans-serif;
+					align-content: center;
+				}
+
+				#popular{
+					text-align: center;
+					display: flex;
+					align-content: center;
+					justify-content: space-between;
+				}
+
+				.card {
+					width: 350px;
+					height: 350px;
+					margin: 1em;
+					background-color: #eee;
+					box-shadow: 0 0 22px rgba(0, 0, 0, 0.44);
+					text-align: center;
+				}
+
+				.card > p{
+					text-align: center;
+				}
+
+				img{
+					width: 350px;
+				}
+
+				.banner {
+					font-size: 36px;
+				}
+
+				h1{
+					text-align: center;
+					font-size: 28px;
+				}
+
+				p{
+					font-size: 18px;
+				}
+
+				nav{
+					text-align: center;
+					background-color: silver;
+					border: 3px solid black;
+					border-radius: 0.5em;
+					display: flex;
+					justify-content: space-between;
+					width: 1200px;
+					align-items: center;
+					padding-left: 3px;
+					padding-right: 3px;
+				}
+
+				strong{
+					color: green;
+				}
+
+				.color-0 { background-color: rgb(255, 255, 0) }
+				.color-1 { background-color: rgb(255, 190, 0) }
+				.color-2 { background-color: rgb(255, 125, 0) }
+				.color-3 { background-color: rgb(255, 80, 0) }
+				.color-4 { background-color: rgb(255, 40, 0) }
+				.color-5 { background-color: rgb(255, 0, 0) }
+				.color-6 { background-color: rgb(234, 0, 0) }
+				.color-7 { background-color: rgb(221, 0, 0) }
+				.color-8 { background-color: rgb(204, 0, 0) }
+				.color-9 { background-color: rgb(187, 0, 0) }
+				.color-10 { background-color: rgb(170, 0, 0) }
+				.color-11 { background-color: rgb(153, 0, 0) }
+				.color-12 { background-color: rgb(136, 0, 0) }
+				.color-13 { background-color: rgb(119, 0, 0) }
+				.color-14 { background-color: rgb(102, 0, 0) }
+				.color-15 { background-color: rgb(85, 0, 0) }
+				.color-16 { background-color: rgb(68, 0, 0) }
+				.color-17 { background-color: rgb(51, 0, 0) }
+				.color-18 { background-color: rgb(34, 0, 0) }
+				.color-19 { background-color: rgb(17, 0, 0) }
+				.color-20 { background-color: rgb(0, 0, 0) }
+				.color-21 { background-color: rgb(0, 17, 0) }
+				.color-22 { background-color: rgb(0, 34, 0) }
+				.color-23 { background-color: rgb(0, 51, 0) }
+				.color-24 { background-color: rgb(0, 68, 0) }
+				.color-25 { background-color: rgb(0, 85, 0) }
+				.color-26 { background-color: rgb(0, 102, 0) }
+				.color-27 { background-color: rgb(0, 119, 0) }
+				.color-28 { background-color: rgb(0, 136, 0) }
+				.color-29 { background-color: rgb(0, 153, 0) }
+				.color-30 { background-color: rgb(0, 170, 0) }
+				.color-31 { background-color: rgb(0, 187, 0) }
+				.color-32 { background-color: rgb(0, 204, 0) }
+				.color-33 { background-color: rgb(0, 221, 0) }
+				.color-34 { background-color: rgb(0, 238, 0) }
+				.color-35 { background-color: rgb(0, 255, 0) }
+				.color-36 { background-color: rgb(0, 238, 0) }
+				.color-37 { background-color: rgb(0, 255, 0) }
+				.color-38 { background-color: rgb(0, 255, 17) }
+				.color-39 { background-color: rgb(0, 255, 34) }
+				.color-40 { background-color: rgb(0, 255, 51) }
+				.color-41 { background-color: rgb(0, 255, 68) }
+				.color-42 { background-color: rgb(0, 255, 85) }
+				.color-43 { background-color: rgb(0, 255, 102) }
+				.color-44 { background-color: rgb(0, 255, 119) }
+				.color-45 { background-color: rgb(0, 255, 136) }
+				.color-46 { background-color: rgb(0, 255, 153) }
+				.color-47 { background-color: rgb(0, 255, 170) }
+				.color-48 { background-color: rgb(0, 255, 187) }
+				.color-49 { background-color: rgb(0, 255, 204) }
+				.color-50 { background-color: rgb(0, 255, 221) }
+				.color-51 { background-color: rgb(0, 255, 238) }
+				.color-52 { background-color: rgb(0, 255, 255) }
+				.color-53 { background-color: rgb(0, 255, 240) }
+				.color-54 { background-color: rgb(0, 255, 255) }
+				.color-55 { background-color: rgb(0, 238, 255) }
+				.color-56 { background-color: rgb(0, 221, 255) }
+				.color-57 { background-color: rgb(0, 204, 255) }
+				.color-58 { background-color: rgb(0, 187, 255) }
+				.color-59 { background-color: rgb(0, 170, 255) }
+				.color-60 { background-color: rgb(0, 153, 255) }
+				.color-61 { background-color: rgb(0, 136, 255) }
+				.color-62 { background-color: rgb(0, 119, 255) }
+				.color-63 { background-color: rgb(0, 102, 255) }
+				.color-64 { background-color: rgb(0, 85, 255) }
+				.color-65 { background-color: rgb(0, 68, 255) }
+				.color-66 { background-color: rgb(0, 51, 255) }
+				.color-67 { background-color: rgb(0, 34, 255) }
+				.color-68 { background-color: rgb(0, 17, 255) }
+				.color-69 { background-color: rgb(0, 0, 255) }
+				.color-70 { background-color: rgb(17, 0, 255) }
+				.color-71 { background-color: rgb(34, 0, 255) }
+				.color-72 { background-color: rgb(51, 0, 255) }
+				.color-73 { background-color: rgb(68, 0, 255) }
+				.color-74 { background-color: rgb(85, 0, 255) }
+				.color-75 { background-color: rgb(102, 0, 255) }
+				.color-76 { background-color: rgb(119, 0, 255) }
+				.color-77 { background-color: rgb(136, 0, 255) }
+				.color-78 { background-color: rgb(153, 0, 255) }
+				.color-79 { background-color: rgb(170, 0, 255) }
+				.color-80 { background-color: rgb(187, 0, 255) }
+				.color-81 { background-color: rgb(204, 0, 255) }
+				.color-82 { background-color: rgb(221, 0, 255) }
+				.color-83 { background-color: rgb(238, 0, 255) }
+				.color-84 { background-color: rgb(255, 0, 255) }
+				.color-85 { background-color: rgb(255, 17, 255) }
+				.color-86 { background-color: rgb(255, 34, 255) }
+				.color-87 { background-color: rgb(255, 51, 255) }
+				.color-88 { background-color: rgb(255, 68, 255) }
+				.color-89 { background-color: rgb(255, 85, 255) }
+				.color-90 { background-color: rgb(255, 102, 255) }
+				.color-91 { background-color: rgb(255, 119, 255) }
+				.color-92 { background-color: rgb(255, 136, 255) }
+				.color-93 { background-color: rgb(255, 153, 255) }
+				.color-94 { background-color: rgb(255, 170, 255) }
+				.color-95 { background-color: rgb(255, 187, 255) }
+				.color-96 { background-color: rgb(255, 204, 255) }
+				.color-97 { background-color: rgb(255, 221, 255) }
+				.color-98 { background-color: rgb(255, 238, 255) }
+				.color-99 { background-color: rgb(255, 255, 255) }
+
+				#items{
+					background-color: skyblue;
+					list-style-type: none;
+					text-align: center;
+					border-radius: 1rem;
+					color: orange;
+					justify-content: space-between;
+				}
+
+				#total{
+					color: green;
+					text-align: center;
+				}
+
+				.add-one{
+					background-color: lime;
+				}
+
+				.remove-one{
+					background-color: red;
+					color: white;
+				}
+
+				.remove{
+					background-color: orangered;
+					color: white;
+				}
+
+				#contact{
+					text-align: center;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: space-between;
+					flex-wrap: wrap;
+				}
+			</style>
+	</head>
+	<body>
+
+		<!-- Base Styles - Set the base styles for the page -->
+
+		<main>
+
+			<!-- navbar - Style the navbar -->
+			<section id="nav">
+				<header>
+					<nav>
+						<a href="#">Color.com</a>
+						<a href="#about">About</a>
+						<a href="#popular">Popular</a>
+						<a href="#swatches">Swatches</a>
+						<a href="#cart">Order</a>
+						<a href="#contact">Contact</a>
+					</nav>
+				</header>
+			</section>
+
+			<!-- banner -->
+			<section id="banner">
+				<ticker-tape><h1>...Color.com is awesome...</h1></ticker-tape>
+			</section>
+
+
+			<!-- section about - -->
+			<section id="about">
+				<header>
+					<h1>What is color?</h1>
+				</header>
+				<p><strong>Color</strong> (American English), or colour (Commonwealth English), is the characteristic of visual perception described through color categories, with names such as red, orange, yellow, green, blue, or purple. This perception of color derives from the stimulation of photoreceptor cells (in particular cone cells in the human eye and other vertebrate eyes) by electromagnetic radiation (in the visible spectrum in the case of humans).</p>
+				<p>Color is really important for making great <abbr title="Cascading Style Sheets">CSS</abbr> styles. <a href="#">Color.com is the most amazing place to get your colors.</a></p>
+			</section>
+
+
+			
+			<!-- Section Color Cards - This section contains three cards Style these -->
+			<section id="popular">
+				<div class="card">
+					<img src="images/600px-64_365_Color_Macro.jpg">
+					<p>Colored Pencils</p>
+				</div>
+
+				<div class="card">
+					<img src="images/600px-Nasir-al_molk.jpg">
+					<p>Color effect—sunlight shining through stained glass onto carpet (Nasir ol Molk Mosque located in Shiraz, Iran)</p>
+				</div>
+
+				<div class="card">
+					<img src="images/600px-Chubb_Illusion.png">
+					<p>Colors can appear different depending on their surrounding colors and shapes. The two small squares have exactly the same color, but the right one looks slightly darker, the Chubb illusion.</p>
+				</div>
+			</section>
+
+
+
+			<!-- Section Color Swatches - This section contains -->
+			<section id="swatches">
+				<header>
+					<h1>Colors</h1>
+					<p>At color.com we offer a range of high quality colors.</p>
+				</header>
+				<div class="swatches">
+					<!-- div.swatch -->
+				</div>
+			</section>
+
+			<section id="cart">
+				<header>
+					<h1>Cart</h1>
+				</header>
+
+				<ul id="items">
+					<!-- Items here -->
+				</ul>
+	
+				<div id="total">
+					<!-- Total here -->
+				</div>
+			</section>
+
+
+
+			<!-- Contact form -->
+			<section id="contact">
+				<header>
+					<h1>Contact</h1>
+				</header>
+				<div>
+					<form>
+						<label>
+							name
+							<input type="text">
+						</label>
+
+						<label>
+							Subject
+							<input type="text">
+						</label>
+
+						<label>
+							Message
+							<textarea></textarea>
+						</label>
+
+						<label>
+							Sign up for the newsletter
+							<input type="checkbox">
+						</label>
+
+						<label>
+							<input type="radio" name="user">
+							Artist
+						</label>
+
+						<label>
+							<input type="radio" name="user">
+							Designer
+						</label>
+
+						<label>
+							<input type="radio" name="user">
+							Enthusiast
+						</label>
+						<button>Submit</button>
+					</form>
+				</div>
+			</section>
+
+
+			<!-- Footer -->
+			<section id="footer">
+				<footer>
+					<ul>
+
+					</ul>
+				</footer>
+			</section>
+
+		</main>
+
+		<script>
+			
+
+			// All 100 color swatches has a CSS custom property assigne to it. 
+			// You can use this color each swatch with a unique color. 
+
+			// --color-sample-0 : red
+			// --color-sample-1 : green
+			// ...
+			// --color-sample-99 : blue
+
+			// make some swatches 
+			const swatchCount = 100
+			for (let i = 0; i < swatchCount; i += 1) {
+				const swatch = `
+				<div 
+					class="swatch add-to-cart color-${i}" 
+					data-color="Color ${i}" 
+					data-price="${(Math.random() * 10).toFixed(2)}"></div>`
+				document.querySelector('.swatches').innerHTML += swatch
+			}
+
+      const addForm = document.getElementById('add-form')
+      const inputName = document.getElementById('name')
+      const inputPrice = document.getElementById('price')
+      const itemsList = document.getElementById('items')
+      const divTotal = document.getElementById('total')
+
+			function handleClicks(e) {
+				if (e.target.matches('.swatch')) {
+					const color = e.target.dataset.color
+					const price = e.target.dataset.price
+					addToCart(color, price)
+				}
+			}
+			
+			document.querySelector('body').addEventListener('click', handleClicks)
+
+      const cart = []
+
+      document.querySelector('body').addEventListener('submit', function(e){
+        e.preventDefault()
+        const name = inputName.value
+        const price = inputPrice.value
+        addToCart(name, price)
+        showCart()
+      })
+
+			document.querySelector('body').addEventListener('click', function(e) {
+        if (e.target && e.target.classList.contains('remove')) {
+          console.log(e.target.dataset.name)
+          removeFromCart(e.target.dataset.name)
+        } else if (e.target && e.target.classList.contains('add-one')) {
+          addToCart(e.target.dataset.name)
+        } else if (e.target && e.target.classList.contains('remove-one')) {
+          removeFromCart(e.target.dataset.name, 1)
+        }
+			})
+
+      document.querySelector('body').addEventListener('input', function(e) {
+        if (e.target.matches('.update')) {
+          const qty = parseInt(e.target.value)
+          const name = e.target.dataset.name
+          updateCart(name, qty)
+        }
+      })
+
+      function addToCart(name, price) {
+        for (let i = 0; i < cart.length; i += 1) {
+          if (cart[i].name === name) {
+            cart[i].qty += 1
+            showCart()
+            return true
+          }
+        }
+        cart.push({ name, price, qty: 1})
+        showCart()
+      }
+
+      function removeFromCart(name, qty = 0) {
+        console.log(name, qty)
+        for (let i = 0; i < cart.length; i += 1) {
+          if (cart[i].name === name) {
+            if (qty) {
+              let newQty = cart[i].qty - qty
+              if (newQty > 0) {
+                cart[i].qty = newQty
+              } else {
+                cart.splice(i, 1)
+              }
+            } else {
+              cart.splice(i, 1)
+            }
+          }
+        }
+
+        showCart()
+      }
+
+      function showCart() {
+        let str = ''
+        for (let i = 0; i < cart.length; i += 1) {
+					// Shopping cart list item! 
+          str += `<li>
+            <span>
+							<span>${cart[i].name}</span>
+							<span>${cart[i].price}</span> 
+							<span>each x</span>
+							<span>${cart[i].qty}</span> 
+							<span> = </span>  
+							<span>${(cart[i].qty * cart[i].price).toFixed(2)}</span>
+						</span>
+            
+						<span>
+							<input class="update" data-name="${cart[i].name}" type="number" value="${cart[i].qty}">
+							<button class="add-one" data-name="${cart[i].name}"> + </button>
+							<button class="remove-one" data-name="${cart[i].name}"> - </button>
+							<button class="remove" data-name="${cart[i].name}">remove</button>
+						</span>
+          </li>`
+        }
+        itemsList.innerHTML = str
+        divTotal.innerHTML = getTotal()
+      }
+
+      function getTotal() {
+        let total = 0
+        for (let i = 0; i < cart.length; i += 1) {
+          total += cart[i].price * cart[i].qty
+        }
+        return total.toFixed(2)
+      }
+
+      function updateCart(name, qty) {
+        for (let i = 0; i < cart.length; i += 1) {
+          if (cart[i].name === name) {
+            cart[i].qty = qty
+            showCart()
+            return true
+          }
+        }
+        return false
+      }
+
+      showCart()
+      getTotal()
+
+	  const tempNode = template.content.cloneNode(true)
+	  this._shadowRoot = this.attachShadow({ mode: 'open' });
+	  this._shadowRoot.appendChild(tempNode)
+
+		</script>
+		
+	</body>
+</html>
