@@ -226,17 +226,8 @@
 					padding: 1rem;
 				}
 
-				@keyframes move {
-					from { background-position: 0 0; }
-					to { background-position: 100% 0; }
-				}
-
 				ticker-tape {
 					color: red;
-					background-position: 0px 0px;
-					animation-name: move;
-					animation-duration: 4s;
-					animation: move 4s linear infinite;
 				}
 			</style>
 	</head>
@@ -529,7 +520,9 @@
       showCart()
       getTotal()
 
-	  customElements.define('ticker-tape', TickerTape);
+	  
 		</script>
+
+		<script src='ticker-tape.js'></script>
 	</body>
 </html>
