@@ -80,41 +80,41 @@
 				}
 
 				.color-0 { background-color: rgb(255, 255, 0) }
-				.color-1 { background-color: rgb(255, 190, 0) }
-				.color-2 { background-color: rgb(255, 125, 0) }
-				.color-3 { background-color: rgb(255, 80, 0) }
-				.color-4 { background-color: rgb(255, 40, 0) }
-				.color-5 { background-color: rgb(255, 0, 0) }
-				.color-6 { background-color: rgb(234, 0, 0) }
-				.color-7 { background-color: rgb(221, 0, 0) }
-				.color-8 { background-color: rgb(204, 0, 0) }
-				.color-9 { background-color: rgb(187, 0, 0) }
-				.color-10 { background-color: rgb(170, 0, 0) }
-				.color-11 { background-color: rgb(153, 0, 0) }
-				.color-12 { background-color: rgb(136, 0, 0) }
-				.color-13 { background-color: rgb(119, 0, 0) }
-				.color-14 { background-color: rgb(102, 0, 0) }
-				.color-15 { background-color: rgb(85, 0, 0) }
-				.color-16 { background-color: rgb(68, 0, 0) }
-				.color-17 { background-color: rgb(51, 0, 0) }
-				.color-18 { background-color: rgb(34, 0, 0) }
-				.color-19 { background-color: rgb(17, 0, 0) }
-				.color-20 { background-color: rgb(0, 0, 0) }
-				.color-21 { background-color: rgb(0, 17, 0) }
-				.color-22 { background-color: rgb(0, 34, 0) }
-				.color-23 { background-color: rgb(0, 51, 0) }
-				.color-24 { background-color: rgb(0, 68, 0) }
-				.color-25 { background-color: rgb(0, 85, 0) }
-				.color-26 { background-color: rgb(0, 102, 0) }
-				.color-27 { background-color: rgb(0, 119, 0) }
-				.color-28 { background-color: rgb(0, 136, 0) }
-				.color-29 { background-color: rgb(0, 153, 0) }
-				.color-30 { background-color: rgb(0, 170, 0) }
-				.color-31 { background-color: rgb(0, 187, 0) }
-				.color-32 { background-color: rgb(0, 204, 0) }
-				.color-33 { background-color: rgb(0, 221, 0) }
-				.color-34 { background-color: rgb(0, 238, 0) }
-				.color-35 { background-color: rgb(0, 255, 0) }
+				.color-1 { background-color: rgb(255, 225, 0) }
+				.color-2 { background-color: rgb(255, 190, 0) }
+				.color-3 { background-color: rgb(255, 150, 0) }
+				.color-4 { background-color: rgb(255, 125, 0) }
+				.color-5 { background-color: rgb(255, 80, 0) }
+				.color-6 { background-color: rgb(255, 40, 0) }
+				.color-7 { background-color: rgb(255, 0, 0) }
+				.color-8 { background-color: rgb(234, 0, 0) }
+				.color-9 { background-color: rgb(221, 0, 0) }
+				.color-10 { background-color: rgb(204, 0, 0) }
+				.color-11 { background-color: rgb(187, 0, 0) }
+				.color-12 { background-color: rgb(170, 0, 0) }
+				.color-13 { background-color: rgb(153, 0, 0) }
+				.color-14 { background-color: rgb(136, 0, 0) }
+				.color-15 { background-color: rgb(119, 0, 0) }
+				.color-16 { background-color: rgb(102, 0, 0) }
+				.color-17 { background-color: rgb(85, 0, 0) }
+				.color-18 { background-color: rgb(68, 0, 0) }
+				.color-19 { background-color: rgb(51, 0, 0) }
+				.color-20 { background-color: rgb(34, 0, 0) }
+				.color-21 { background-color: rgb(17, 0, 0) }
+				.color-22 { background-color: rgb(0, 0, 0) }
+				.color-23 { background-color: rgb(0, 17, 0) }
+				.color-24 { background-color: rgb(0, 34, 0) }
+				.color-25 { background-color: rgb(0, 51, 0) }
+				.color-26 { background-color: rgb(0, 68, 0) }
+				.color-27 { background-color: rgb(0, 85, 0) }
+				.color-28 { background-color: rgb(0, 102, 0) }
+				.color-29 { background-color: rgb(0, 119, 0) }
+				.color-30 { background-color: rgb(0, 136, 0) }
+				.color-31 { background-color: rgb(0, 153, 0) }
+				.color-32 { background-color: rgb(0, 170, 0) }
+				.color-33 { background-color: rgb(0, 187, 0) }
+				.color-34 { background-color: rgb(0, 204, 0) }
+				.color-35 { background-color: rgb(0, 221, 0) }
 				.color-36 { background-color: rgb(0, 238, 0) }
 				.color-37 { background-color: rgb(0, 255, 0) }
 				.color-38 { background-color: rgb(0, 255, 17) }
@@ -211,10 +211,32 @@
 				#contact{
 					text-align: center;
 					display: flex;
-					flex-direction: column;
 					align-items: center;
 					justify-content: space-between;
 					flex-wrap: wrap;
+					flex-direction: column;
+					padding: 1rem;
+					line-height: 1.5;
+				}
+
+				#contact > div > form > label {
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					padding: 1rem;
+				}
+
+				@keyframes move {
+					from { background-position: 0 0; }
+					to { background-position: 100% 0; }
+				}
+
+				ticker-tape {
+					color: red;
+					background-position: 0px 0px;
+					animation-name: move;
+					animation-duration: 4s;
+					animation: move 4s linear infinite;
 				}
 			</style>
 	</head>
@@ -507,11 +529,7 @@
       showCart()
       getTotal()
 
-	  const tempNode = template.content.cloneNode(true)
-	  this._shadowRoot = this.attachShadow({ mode: 'open' });
-	  this._shadowRoot.appendChild(tempNode)
-
+	  customElements.define('ticker-tape', TickerTape);
 		</script>
-		
 	</body>
 </html>
